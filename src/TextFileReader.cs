@@ -72,11 +72,11 @@
 			return Recurrences;
 		}
 		public void WriteAtEnd(string Value){
-			System.IO.File.AppendAllText(this.File, "\n" + Value);
+			System.IO.File.AppendAllText(this.File, System.Environment.NewLine + Value);
 		}
 		public void WriteLinesAtEnd(string[] Lines){
 			if(Lines.Length > 0)
-				Lines[0] = "\n" + Lines[0];
+				Lines[0] = System.Environment.NewLine + Lines[0];
 			System.IO.File.AppendAllLines(this.File, Lines);
 		}
 		public void WriteAtLocation(string Value, int Location){

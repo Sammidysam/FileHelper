@@ -10,14 +10,24 @@
 			this.Path = Path;
 		}
 		public string GetPath(){
+			CheckPath();
 			return Path;
+		}
+		private void CheckPath(){
+			if(Path[Path.Length - 1] != System.IO.Path.DirectorySeparatorChar)
+				Path += System.IO.Path.DirectorySeparatorChar;
+		}
+		public void PrintPath(){
+			System.Console.WriteLine(GetPath());
 		}
 		public void Back(){
 			for(int i = 0; i < 2; i++){
-				var Index = Path.LastIndexOf('\\');
+				if(Path[Path.Length - 1] == System.IO.Path.DirectorySeparatorChar)
+					i++;
+				var Index = Path.LastIndexOf(System.IO.Path.DirectorySeparatorChar);
 				Path = Path.Substring(0, Index);
 			}
-			Path += '\\';
+			Path += System.IO.Path.DirectorySeparatorChar;
 		}
 		public string[] GetItemsInDirectory(){
 			var Files = System.IO.Directory.GetFiles(Path);
