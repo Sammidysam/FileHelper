@@ -5,3 +5,8 @@ I was unimpressed by C#'s native File and Path classes, so I made my own, mainly
 
 
 This is a library programmed in C#.  It is used, as noted above, to make getting pathes and utilizing text files easier.  It isn't overly hard at the moment, but I'm looking for it to be so simple a caveman could do it.  I will likely use this library in any future C# projects I do.
+
+License
+=======
+
+This program is licensed under the GNU Lesser General Public License version 3. To see the license, visit the file [LICENSE](LICENSE).
